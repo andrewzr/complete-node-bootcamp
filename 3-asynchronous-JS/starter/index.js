@@ -1,6 +1,4 @@
-const { reject } = require("assert");
 const fs = require("fs");
-const { resolve } = require("path");
 const superagent = require("superagent");
 
 const readFilePro = file => {
