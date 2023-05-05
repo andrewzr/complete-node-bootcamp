@@ -4,7 +4,7 @@ const superagent = require("superagent");
 const readFilePro = file => {
     return new Promise((resolve, reject) => {
         fs.readFile(file, (err, data) => {
-            if (err) reject("Could not READ file :(")
+            if (err) reject("Could not READ file :(");
             resolve(data);
         });
     });
@@ -13,7 +13,7 @@ const readFilePro = file => {
 const writeFilePro = (file, data) => {
     return new Promise((resolve, reject) => {
         fs.writeFile(file, data, err => {
-            if (err) reject("Could not WRITE file T_T")
+            if (err) reject("Could not WRITE file T_T");
             resolve("success");
         });
     });
@@ -37,24 +37,24 @@ const getDocPic = async () => {
         console.log(err);
         throw err;
     }
-    return "2: DOGGO READY!"
+    return "2: DOGGO PICTURES READY!";
 };
 
 (async () => {
     try {
-        console.log("1: Will get dog pics!")
+        console.log("1: Will get dog pics!");
         const x = await getDocPic();
         console.log(x);
-        console.log("3: Done getting dog pics!")
+        console.log("3: Done getting dog pics!");
     } catch (err) {
         console.log("Error in promise");
     }
 })();
 
-// console.log("1: Will get dog pics!")
+// console.log("1: Will get dog pics!");
 // getDocPic().then(x  => {
 //     console.log(x);
-//     console.log("3: Done getting dog pics!")
+//     console.log("3: Done getting dog pics!");
 // }).catch(err => {
 //     console.log("Error in promise");
 // });
